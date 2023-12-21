@@ -1,23 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import {Header} from "./components/Header";
+import {Footer} from "./components/Footer";
+import './styles/styles.css';
+import {MovieContext} from "./context/MovieContext";
+import GlobalRouter from "./router/GlobalRouter";
+import {useMovies} from "./hooks/useMovies";
+import Menu from './components/Menu';
 
 function App() {
+
+    const movies = useMovies();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="Home">
+        <MovieContext.Provider value={{movies}}>
+            <Header/>
+            <GlobalRouter></GlobalRouter>
+            <Footer />
+        </MovieContext.Provider>
+
     </div>
   );
 }
