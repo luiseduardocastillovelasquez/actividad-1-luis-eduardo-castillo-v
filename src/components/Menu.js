@@ -7,11 +7,11 @@ const Menu = () => {
         <Link to={`/`} className="menu-link">
             <button className="menu-button">Home</button>
         </Link>
-        <Link to={`/movies/`} className="menu-link">
-            <button className="menu-button">Documentales</button>
-        </Link>
-        <Link to={`/movies/`} className="menu-link">
-            <button className="menu-button">Peliculas</button>
+            <Link to={`/movies/`} className="menu-link">
+                <button className="menu-button">Ver Catalogo</button>
+            </Link>
+        <Link to={`/moviespurchased/`} className="menu-link">
+            <button className="menu-button">Peliculas Compradas o Alquiladas</button>
         </Link>
         </div>
     );

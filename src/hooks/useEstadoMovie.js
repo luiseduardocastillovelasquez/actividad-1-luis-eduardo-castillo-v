@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 
-export const MovieLocalStorage = ({ movieId, onAlquilar }) => {
+export const useEstadoMovie = ({ movieId, onAlquilar }) => {
     const [verPeliculaEnabled, setVerPeliculaEnabled] = useState(false);
 
     useEffect(() => {
@@ -61,4 +61,4 @@ export const MovieLocalStorage = ({ movieId, onAlquilar }) => {
     return { verPeliculaEnabled, handleAlquilar };
 };
 
-export default MovieLocalStorage;
+export default useEstadoMovie;

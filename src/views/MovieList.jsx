@@ -18,6 +18,7 @@ export const MoviesList = () => {
                 field.toLowerCase().includes(value.toLowerCase())
             )
         );
+        console.log(movies);
 
             setFilteredMovies(filteredResults);
     };

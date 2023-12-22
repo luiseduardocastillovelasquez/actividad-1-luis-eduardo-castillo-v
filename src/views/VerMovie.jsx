@@ -2,7 +2,6 @@ import React, {useContext, useState} from "react";
 import {Link, useParams} from "react-router-dom";
 import {MovieContext} from "../context/MovieContext";
 import LinearProgress from "./LinearProgress";
-import UseAlquilar from "../hooks/useAlquilar";
 const VerMovie = () => {
     const {movieId} = useParams();
     const {movies} = useContext(MovieContext);

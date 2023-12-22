@@ -10,7 +10,7 @@ const Home = () => {
                     <img className="image-movies" />
                 </Link>
 
-                <Link to={`/movies/`} className="box">
+                <Link to={`/moviespurchased/`} className="box">
                     <img className="image-comprasmovie" />
                 </Link>
             </div>

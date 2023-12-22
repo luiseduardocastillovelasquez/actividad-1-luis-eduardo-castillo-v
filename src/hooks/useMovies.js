@@ -22,7 +22,9 @@ export const useMovies = () => {
                     imagen: "https://image.tmdb.org/t/p/w185/sXeWfpT1EhG7f4uBouqraOhmouH.jpg",
                     trailler:"<iframe width=\"1298\" height=\"487\" src=\"https://www.youtube.com/embed/RJ4b1ZQxPmE\" title=\"JURASSIC WORLD: DOMINION - Tráiler Oficial 2 (Universal Pictures) HD\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>",
                     alquiler:"false",
-                    comprada:"false"
+                    comprada:"false",
+                    precioalquiler:"50.000",
+                    preciocompra:"120.000"
                 },
                 {
                     id: "2",
@@ -38,7 +40,9 @@ export const useMovies = () => {
                     imagen: "https://image.tmdb.org/t/p/w185/vThe85YlGE5r7fqEVFePETqnWzk.jpg",
                     trailler: "<iframe width=\"1258\" height=\"480\" src=\"https://www.youtube.com/embed/aWzlQ2N6qqg\" title=\"Marvel Studios&#39; Doctor Strange in the Multiverse of Madness | Official Trailer\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>",
                     alquiler:"false",
-                    comprada:"false"
+                    comprada:"true",
+                    precioalquiler:"80.000",
+                    preciocompra:"100.000"
                 },
                 {
                     id: "3",
@@ -54,7 +58,9 @@ export const useMovies = () => {
                     imagen: "https://image.tmdb.org/t/p/w185/1z7ZQhga4AcSkQNqEU3Tf9XpxoX.jpg",
                     trailler: "<iframe width=\"1258\" height=\"480\" src=\"https://www.youtube.com/embed/CIRQTZ4yZrI?list=PLOx4pXZYwcTNRqz0teHJpdguIyTIf9d9T\" title=\"Mysterio Revela la Identidad de Peter - Spider-Man No Way Home (Español Latino)\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>",
                     alquiler:"true",
-                    comprada:"false"
+                    comprada:"false",
+                    precioalquiler:"50.000",
+                    preciocompra:"120.000"
                 },
                 {
                     id: "4",
@@ -70,7 +76,9 @@ export const useMovies = () => {
                     imagen: "https://image.tmdb.org/t/p/w185/9sPHXiWJnae2Pqv9EfAqGs634m9.jpg",
                     trailler: "<iframe width=\"1258\" height=\"480\" src=\"https://www.youtube.com/embed/v1EkoQV4g5c\" title=\"Eternals de Marvel Studios | Tráiler Oficial | Doblado\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>",
                     alquiler:"false",
-                    comprada:"false"
+                    comprada:"false",
+                    precioalquiler:"30.000",
+                    preciocompra:"90.000"
                 },
                 {
                     id: "5",
@@ -86,7 +94,9 @@ export const useMovies = () => {
                     imagen: "https://image.tmdb.org/t/p/w185/8c4a8kE7PizaGQQnditMmI1xbRp.jpg",
                     trailler: "<iframe width=\"1258\" height=\"480\" src=\"https://www.youtube.com/embed/nNpvWBuTfrc\" title=\"The Matrix Resurrections – Official Trailer 2\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>",
                     alquiler:"false",
-                    comprada:"false"
+                    comprada:"false",
+                    precioalquiler:"90.000",
+                    preciocompra:"220.000"
                 },
                 {
                     id: "6",
@@ -102,7 +112,9 @@ export const useMovies = () => {
                     imagen: "https://image.tmdb.org/t/p/w185/8c4a8kE7PizaGQQnditMmI1xbRp.jpg",
                     trailler: "<iframe width=\"1258\" height=\"480\" src=\"https://www.youtube.com/embed/nNpvWBuTfrc\" title=\"The Matrix Resurrections – Official Trailer 2\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>",
                     alquiler:"false",
-                    comprada:"false"
+                    comprada:"false",
+                    precioalquiler:"10.000",
+                    preciocompra:"40.000"
                 },
                 {
                     id: "7",
@@ -118,7 +130,9 @@ export const useMovies = () => {
                     imagen: "https://image.tmdb.org/t/p/w780/1b2qmBIO91k7STcZP6Dx0Q5snU5.jpg",
                     trailler: "<iframe width=\"1258\" height=\"480\" src=\"https://www.youtube.com/embed/5r9JTn8FAsw\" title=\"ESTRENO 2023! Pelicula, Completa en Espanol Latino HD\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>",
                     alquiler:"false",
-                    comprada:"false"
+                    comprada:"true",
+                    precioalquiler:"60.000",
+                    preciocompra:"110.000"
                 },
                 {
                     id: "8",
@@ -132,9 +146,12 @@ export const useMovies = () => {
                     idioma: "español",
                     actores: "Aiden Campbell, Bella Sanchez",
                     imagen: "https://image.tmdb.org/t/p/w780/lyHmhoRj3zXSdeCYbs2oOXLCF4K.jpg",
-                    trailler: "<iframe width=\"1258\" height=\"480\" src=\"https://www.youtube.com/embed/h0HdYgYpu4U\" title=\"Jumanji: Siguiente Nivel (2023) - MEJOR PELICULAS DE ACCION Pelicula, Completa en Espanol Latino HD\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>",
+                    trailler: "<iframe width=\"1258\" height=\"480\" src=\"https://www.youtube.com/embed/zXKHGaRxQaE\" title=\"The imitation game (Descifrando Enigma) - Trailer español\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>",
                     alquiler:"true",
-                    comprada:"false"
+                    comprada:"false",
+                    precioalquiler:"50.000",
+                    preciocompra:"120.000"
+
                 },
                 {
                     id: "9",
@@ -149,7 +166,10 @@ export const useMovies = () => {
                     actores: "Natalie Foster, Sebastian Morales",
                     imagen: "https://image.tmdb.org/t/p/w780/8MDDAi8VnWKJdMmsxuJ1YL1wc21.jpg",
                     alquiler:"false",
-                    comprada:"true"
+                    comprada:"true",
+                    precioalquiler:"50.000",
+                    preciocompra:"120.000",
+                    trailler: "<iframe width=\"1258\" height=\"480\" src=\"https://www.youtube.com/embed/zXKHGaRxQaE\" title=\"The imitation game (Descifrando Enigma) - Trailer español\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
                 },
                 {
                     id: "10",
@@ -164,11 +184,14 @@ export const useMovies = () => {
                     actores: "Michael Thompson, Olivia Chen",
                     imagen: "https://image.tmdb.org/t/p/w780/cUHxmWfkp6se0Rt10Kr86bMCYDE.jpg",
                     alquiler:"false",
-                    comprada:"false"
+                    comprada:"false",
+                    precioalquiler:"50.000",
+                    preciocompra:"120.000",
+                    trailler: "<iframe width=\"1258\" height=\"480\" src=\"https://www.youtube.com/embed/kA-Ydh0fyXc\" title=\"Hasta el Horizonte (2021) | Trailer en español\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
                 },
                 {
                     id: "11",
-                    name: "Whispers in the Wind",
+                    name: "Win the Windhispers ",
                     director: "Jordan Peele",
                     year: "2023",
                     synopsis: "Mysterious occurrences in a small town reveal dark secrets.",
@@ -179,7 +202,10 @@ export const useMovies = () => {
                     actores: "Emma Davis, Liam Harris",
                     imagen: "https://image.tmdb.org/t/p/w780/j63Clh2P6PKQQNDSruu3z7NPeNu.jpg",
                     alquiler:"false",
-                    comprada:"false"
+                    comprada:"false",
+                    precioalquiler:"80.000",
+                    preciocompra:"170.000",
+                    trailler: "<iframe width=\"1258\" height=\"480\" src=\"https://www.youtube.com/embed/Zu2JbjuhhEY\" title=\"Win Win tráiler oficial\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
                 },
                 {
                     id: "12",
@@ -194,7 +220,8 @@ export const useMovies = () => {
                     actores: "Sophia Rodriguez, Diego Martinez",
                     imagen: "https://image.tmdb.org/t/p/w780/iWOELznrV438fmyJ02GG31dULRM.jpg",
                     alquiler:"false",
-                    comprada:"false"
+                    comprada:"false",
+                    trailler: "<iframe width=\"1258\" height=\"480\" src=\"https://www.youtube.com/embed/hC-6U8HCF8c\" title=\"Harmony - Trailer\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
                 },
                 {
                     id: "13",
@@ -209,7 +236,8 @@ export const useMovies = () => {
                     actores: "Lucas Johnson, Isabella Lopez",
                     imagen: "https://image.tmdb.org/t/p/w780/avteWnUr5XfFYVT2dMS8ZmPtuYR.jpg",
                     alquiler:"false",
-                    comprada:"false"
+                    comprada:"false",
+                    trailler: "<iframe width=\"1258\" height=\"480\" src=\"https://www.youtube.com/embed/zXKHGaRxQaE\" title=\"The imitation game (Descifrando Enigma) - Trailer español\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
                 },
                 {
                     id: "15",
@@ -224,7 +252,10 @@ export const useMovies = () => {
                     actores: "Mia Anderson, Ethan White",
                     imagen: "https://image.tmdb.org/t/p/w780/1X7vow16X7CnCoexXh4H4F2yDJv.jpg",
                     alquiler:"false",
-                    comprada:"false"
+                    comprada:"false",
+                    precioalquiler:"150.000",
+                    preciocompra:"520.000",
+                    trailler: "<iframe width=\"1258\" height=\"480\" src=\"https://www.youtube.com/embed/UKFjeglbNDg\" title=\"ESTO ES INFINITE Tráiler Español Latino (2021) Mark Wahlberg\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
                 },
                 {
                     id: "16",
@@ -239,7 +270,10 @@ export const useMovies = () => {
                     actores: "Gabriel Ramirez, Sofia Perez",
                     imagen: "https://image.tmdb.org/t/p/w780/xgGGinKRL8xeRkaAR9RMbtyk60y.jpg",
                     alquiler:"false",
-                    comprada:"false"
+                    comprada:"false",
+                    precioalquiler:"30.000",
+                    preciocompra:"140.000",
+                    trailler: "<iframe width=\"1258\" height=\"480\" src=\"https://www.youtube.com/embed/PpRt3oGPLTI\" title=\"Resistencia en Star+\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
                 },
                 {
                     id: "17",
@@ -254,11 +288,14 @@ export const useMovies = () => {
                     actores: "Luna Hernandez, Javier Rodriguez",
                     imagen: "https://image.tmdb.org/t/p/w780/4q8yxTRcztBW8eMgoqziiELyHhQ.jpg",
                     alquiler:"false",
-                    comprada:"false"
+                    comprada:"false",
+                    precioalquiler:"50.000",
+                    preciocompra:"120.000",
+                    trailler: "<iframe width=\"1258\" height=\"480\" src=\"https://www.youtube.com/embed/JRD1nWVlQX4\" title=\"Reacher - Temporada 2 | Prime Video\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
                 },
                 {
                     id: "18",
-                    name: "Ephemeral Enigma",
+                    name: "Interstellar",
                     director: "Kathryn Bigelow",
                     year: "2023",
                     synopsis: "Unraveling the mysteries of a fleeting existence.",
@@ -269,11 +306,14 @@ export const useMovies = () => {
                     actores: "Aiden Campbell, Bella Sanchez",
                     imagen: "https://image.tmdb.org/t/p/w185/jd6Hi6Jbi8vdbaaA2U35zq2DVtp.jpg",
                     alquiler:"false",
-                    comprada:"false"
+                    comprada:"false",
+                    precioalquiler:"90.000",
+                    preciocompra:"180.000",
+                    trailler: "<iframe width=\"1258\" height=\"480\" src=\"https://www.youtube.com/embed/HTvJl71zmf4\" title=\"4 Minutes of Interstellar in 4K\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
                 },
                 {
                     id: "19",
-                    name: "Chronicles of Cosmos",
+                    name: "The Black Hole Theory",
                     director: "James Cameron",
                     year: "2023",
                     synopsis: "Journeying through the vast expanse of the universe.",
@@ -284,11 +324,14 @@ export const useMovies = () => {
                     actores: "Natalie Foster, Sebastian Morales",
                     imagen: "https://image.tmdb.org/t/p/w185/xXdW84shjNAzK38CYOAsDR7JG6y.jpg",
                     alquiler:"false",
-                    comprada:"false"
+                    comprada:"false",
+                    precioalquiler:"50.000",
+                    preciocompra:"120.000",
+                    trailler: "<iframe width=\"1258\" height=\"480\" src=\"https://www.youtube.com/embed/OoUVSHDbAeM\" title=\"Stephen Hawking Discovers The Black Hole Theory | The Theory Of Everything (2014) | Screen Bites\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
                 },
                 {
                     id: "20",
-                    name: "Enchanted Reverie",
+                    name: "KUNG FU PANDA",
                     director: "Martin Scorsese",
                     year: "2023",
                     synopsis: "A fantastical adventure into realms of enchantment.",
@@ -299,7 +342,10 @@ export const useMovies = () => {
                     actores: "Daniel Rivera, Isabella Cruz",
                     imagen: "https://image.tmdb.org/t/p/w185/u1WvYS8FRczTY3hv3CBBQzf1vht.jpg",
                     alquiler:"false",
-                    comprada:"true"
+                    comprada:"true",
+                    precioalquiler:"50.000",
+                    preciocompra:"90.000",
+                    trailler: "<iframe width=\"1258\" height=\"480\" src=\"https://www.youtube.com/embed/NSBSEj112Zk\" title=\"KUNG FU PANDA 4 Trailer (2024)\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
                 }
             ]);
         }, 2500)
