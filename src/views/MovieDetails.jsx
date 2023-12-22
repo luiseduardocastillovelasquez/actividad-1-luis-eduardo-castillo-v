@@ -9,20 +9,25 @@ const MovieDetails = () => {
     const movie = movies.find(r => r.id === movieId);
 
     const [showModal, setShowModal] = useState(false);
-    const { verPeliculaEnabled, handleAlquilar } = useEstadoMovie({
+    const [showModalComprar, setShowModalComprar] = useState(false);
+    const { verPeliculaEnabled, alquilarPelicula, comprarPelicula } = useEstadoMovie({
         movieId,
         onAlquilar: () => {
-            // Aquí puedes agregar lógica adicional después de alquilar
-            // por ejemplo, recargar datos o mostrar un mensaje
+
         },
     });
 
-    const handleAccept = () => {
-        // Ocultar la modal
+    const pagarAlquiler = () => {
+        // ocultamos nuestra ventana Modal
         setShowModal(false);
 
-        // Ejecutar la función de alquilar
-        handleAlquilar();
+        // llamamos a la funcion para alquilar la pelicula
+        alquilarPelicula();
+    };
+
+    const pagarComprar = () => {
+        setShowModalComprar(false);
+        comprarPelicula();
     };
 
     if (!movies){
@@ -51,9 +56,9 @@ const MovieDetails = () => {
                     <p>Valor Alquiler: <span>${movie.precioalquiler} Pesos</span></p>
                 </div>
             </div>
-            <Link to={`/movies/${movieId}`}>
-                <button className="detalle-button">Comprar</button>
-            </Link>
+            <button className="detalle-button" onClick={() => setShowModalComprar(true)}>
+                Comprar
+            </button>
             <button className="detalle-button" onClick={() => setShowModal(true)}>
                 Alquilar
             </button>
@@ -62,16 +67,26 @@ const MovieDetails = () => {
                 <button
                     className={`detalle-button ${!verPeliculaEnabled ? "disabled-button" : ""}`}
                     disabled={!verPeliculaEnabled}
-                >
-                    Ver película
-                </button>
+                >Ver Película</button>
             </Link>
             {showModal && (
                 <div className="modal">
                     <div className="modal-content">
                         <p>¿Estás seguro de que quieres alquilar?</p>
-                        <button className="detalle-button" onClick={handleAccept}>Aceptar</button>
+                        <p>{movie.name} a <span>${movie.precioalquiler} Pesos</span></p>
+                        <button className="detalle-button" onClick={pagarAlquiler}>Aceptar</button>
                         <button className="detalle-button" onClick={() => setShowModal(false)}>Cancelar</button>
+                    </div>
+                </div>
+            )}
+            {showModalComprar && (
+                <div className="modal">
+                    <div className="modal-content">
+                        <p>¿Estás seguro de que quieres comprar la Pelicula?</p>
+                        <p>{movie.name}</p>
+                        <p>Valor Compra: <span>${movie.preciocompra} Pesos</span></p>
+                        <button className="detalle-button" onClick={pagarComprar}>Aceptar</button>
+                        <button className="detalle-button" onClick={() => setShowModalComprar(false)}>Cancelar</button>
                     </div>
                 </div>
             )}

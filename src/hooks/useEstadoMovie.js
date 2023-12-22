@@ -1,64 +1,74 @@
 import  { useEffect, useState } from "react";
 
-export const useEstadoMovie = ({ movieId, onAlquilar }) => {
+export const useEstadoMovie = ({ movieId, onAlquilar, onComprar }) => {
     const [verPeliculaEnabled, setVerPeliculaEnabled] = useState(false);
 
     useEffect(() => {
         const handleAlquilerTimeout = () => {
-            // Restablecer el estado de alquilar y modificar el objeto en el localStorage
+            // cuando pase el tiempo volvemos a dejar en falso el alquiler de la pelicula
             setVerPeliculaEnabled(false);
 
-            // Obtener la información actual de localStorage
+            // traemos el obejeto del localstorage
             const storedData = JSON.parse(localStorage.getItem(`movie_${movieId}`)) || {};
 
-            // Modificar el objeto y establecer alquiler a false
+            // lo seteamos a false
             const updatedData = {
                 ...storedData,
                 alquiler: false,
             };
 
-            // Guardar la información actualizada en localStorage
+            // despues de realizar los cambios guardamos nuevamete en el localstorage
             localStorage.setItem(`movie_${movieId}`, JSON.stringify(updatedData));
         };
 
-        // Obtener la información del localStorage para la película actual
+        // traemos la informacion de localstorage
         const storedData = JSON.parse(localStorage.getItem(`movie_${movieId}`)) || {};
 
-        // Verificar si el estado de alquiler es true en el localStorage
+        // validamos si el estado de alquiler es true en el localStorage
         if (storedData.alquiler) {
             setVerPeliculaEnabled(true);
 
-            // Establecer el temporizador para modificar la información después de 10 segundos
+            //como el alquiler es por un  timepo aca establecemos el tiempo en el que puede ver la pelicula alquilada
             const timeoutId = setTimeout(() => {
                 handleAlquilerTimeout();
-                // Limpiar el temporizador al desmontar el componente
                 clearTimeout(timeoutId);
             }, 10 * 1000);
         }
     }, [movieId]);
 
-    const handleAlquilar = () => {
-        // Actualizar el estado de alquiler
+    const alquilarPelicula = () => {
+        // cambiamos el estado de la variable alquiler por true
         setVerPeliculaEnabled(true);
 
-        // Obtener la información actual de localStorage
+        // jalamos los ojetos del localstorage
         const storedData = JSON.parse(localStorage.getItem(`movie_${movieId}`)) || {};
         const updatedData = {
             id: movieId,
             alquiler: true,
             comprada: storedData.comprada || false,
         };
-
-        // Guardar la información actualizada en localStorage
         localStorage.setItem(`movie_${movieId}`, JSON.stringify(updatedData));
-
-        // Proporcionar la funcionalidad de alquilar
         if (onAlquilar) {
             onAlquilar();
         }
     };
 
-    return { verPeliculaEnabled, handleAlquilar };
+    const comprarPelicula = () => {
+        setVerPeliculaEnabled(true);
+        const storedData = JSON.parse(localStorage.getItem(`movie_${movieId}`)) || {};
+        const updatedData = {
+            id: movieId,
+            comprada: true,
+            alquiler: storedData.alquiler || false,
+        };
+
+        localStorage.setItem(`movie_${movieId}`, JSON.stringify(updatedData));
+        if (onComprar) {
+            onComprar();
+        }
+    };
+
+    return { verPeliculaEnabled, alquilarPelicula , comprarPelicula};
 };
 
 export default useEstadoMovie;

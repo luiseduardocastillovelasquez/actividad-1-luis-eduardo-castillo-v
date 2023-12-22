@@ -7,11 +7,11 @@ const Home = () => {
 
             <div className="container">
                     <Link to={`/movies/`} className="box">
-                    <img className="image-movies" />
+                    <img className="image-movies"/>
                 </Link>
 
                 <Link to={`/moviespurchased/`} className="box">
-                    <img className="image-comprasmovie" />
+                    <img className="image-comprasmovie"/>
                 </Link>
             </div>
         </div>

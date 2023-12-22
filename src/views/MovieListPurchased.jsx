@@ -1,8 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
-import { Movie } from "../components/Movie";
 import { MovieContext } from "../context/MovieContext";
 import LinearProgress from "./LinearProgress";
-import UseSearch from "../hooks/useSearch";
 import {MoviePay} from "../components/MoviePay";
 
 export const MovieListPurchased = () => {
@@ -46,10 +44,6 @@ export const MovieListPurchased = () => {
     }, [movies, search]);
 
 
-
-    const handleSearch = (value) => {
-        setSearch(value);
-    };
 
     return (
         <div>

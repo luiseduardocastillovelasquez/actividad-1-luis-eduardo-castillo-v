@@ -194,6 +194,7 @@ body {
     background-color: #dddddd; /* Puedes cambiar esto al color que desees */
     /* ... Otros estilos */
 }
+
 .modal {
     display: flex;
     align-items: center;
@@ -232,4 +233,51 @@ div.column p {
 div.column p span {
     font-weight: normal;
     color: #e8dc8e;
+}
+
+.landing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.landing h1 {
+    position: relative;
+    text-align: center;
+}
+
+/* Estilo para el puntero láser */
+.laser-pointer, .laser-pointer-reverse {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #2038d3;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    animation: rotateAround 2s linear infinite;
+}
+
+.laser-pointer-reverse {
+    animation: rotateAroundReverse 2s linear infinite;
+}
+
+/* Animación para girar alrededor del título */
+@keyframes rotateAround {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg) translateX(150px);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg) translateX(150px);
+    }
+}
+
+@keyframes rotateAroundReverse {
+    0% {
+        transform: translate(-50%, -50%) rotate(360deg) translateX(150px);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(0deg) translateX(150px);
+    }
 }
